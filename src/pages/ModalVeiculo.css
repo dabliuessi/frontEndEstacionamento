@@ -1,3 +1,14 @@
+@keyframes fadein {
+  from {opacity: 0; transform: translateY(-10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeout {
+  to {opacity: 0; transform: translateY(-19px);}
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
 .modal-fundo {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -77,3 +88,5 @@
   opacity: 0.7;
   cursor: default;
 }
+
+

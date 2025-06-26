@@ -52,5 +52,6 @@ export default function ModalVeiculo({ aberto, onFechar, onSalvar, veiculo, setV
         </form>
       </div>
     </div>
+    
   );
 }

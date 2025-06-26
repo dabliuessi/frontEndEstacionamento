@@ -320,13 +320,13 @@ export default function AdminPanel() {
                     vagas ocupadas
                   </span>
 
-                  <div style={{ display: 'flex', gap: 10 }}>
+                  <div style={{ display: 'flex', gap: 4 }}>
                     <button
                       onClick={() => abrirModalEditar(est)}
                       className="login-button"
                       style={{
                         width: 'auto',
-                        padding: '6px 14px',
+                        padding: '8px 19px',
                         backgroundColor: '#d32f2f',
                       }}
                     >
@@ -338,7 +338,7 @@ export default function AdminPanel() {
                       className="login-button"
                       style={{
                         width: 'auto',
-                        padding: '6px 14px',
+                        padding: '8px 19px',
                         backgroundColor: '#555',
                       }}
                     >
@@ -519,7 +519,7 @@ export default function AdminPanel() {
             to {opacity: 1; transform: translateY(0);}
           }
           @keyframes fadeout {
-            to {opacity: 0; transform: translateY(-10px);}
+            to {opacity: 0; transform: translateY(-19px);}
           }
           @keyframes fadeIn {
             from {opacity: 0;}
