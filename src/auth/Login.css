@@ -151,5 +151,9 @@ select.login-input:focus {
   font-size: 1.4rem;
   color: #555;
 }
+a{
+  color: #b71c1c;
+  font-weight: 700;
+}
 
 
