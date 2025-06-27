@@ -290,9 +290,11 @@ export default function AdminPanel() {
               }}
               onMouseEnter={(e) =>
                 (e.currentTarget.style.backgroundColor = '#b71c1c')
+                (e.currentTarget.style.transform = 'scale(1.02)')
               }
               onMouseLeave={(e) =>
                 (e.currentTarget.style.backgroundColor = '#d32f2f')
+                (e.currentTarget.style.transform = 'scale(1)')
               }
             >
               Adicionar Estacionamento
@@ -313,7 +315,14 @@ export default function AdminPanel() {
                     alignItems: 'center',
                     fontWeight: '600',
                     fontSize: 15,
+                    transition: 'transform 0.3s ease',
                   }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.transform = 'scale(1.02)')
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.transform = 'scale(1)')
+                  }
                 >
                   <span>
                     {est.localidade} — {est.vagas_ocupadas}/{est.total_vagas}{' '}
@@ -361,6 +370,8 @@ export default function AdminPanel() {
               alignItems: 'center',
               justifyContent: 'center',
               zIndex: 9999,
+              animation: 'fadeIn 0.5s ease forwards',
+              transition: 'transform 0.3s ease',
             }}
             onClick={fecharModalEstacionamento}
           >
@@ -375,7 +386,7 @@ export default function AdminPanel() {
                 boxShadow: '0 0 20px rgba(0,0,0,0.25)',
                 display: 'flex',
                 flexDirection: 'column',
-                gap: 20,
+                gap: 7,
               }}
             >
               <h3>{modoEdicao ? 'Editar Estacionamento' : 'Adicionar Estacionamento'}</h3>
@@ -400,13 +411,13 @@ export default function AdminPanel() {
                 style={{
                   display: 'flex',
                   justifyContent: 'flex-end',
-                  gap: 10,
+                  gap: 5,
                 }}
               >
                 <button
                   onClick={fecharModalEstacionamento}
                   className="login-button"
-                  style={{ width: 'auto', backgroundColor: '#aaa' }}
+                  style={{ width: '100px', backgroundColor: '#aaa' }}
                 >
                   Cancelar
                 </button>
@@ -414,7 +425,7 @@ export default function AdminPanel() {
                 <button
                   onClick={salvarEstacionamento}
                   className="login-button"
-                  style={{ width: 'auto' }}
+                  style={{ width: '100px' }}
                 >
                   {modoEdicao ? 'Atualizar' : 'Salvar'}
                 </button>
@@ -434,6 +445,8 @@ export default function AdminPanel() {
               alignItems: 'center',
               justifyContent: 'center',
               zIndex: 9999,
+              animation: 'fadeIn 0.5s ease forwards',
+              transition: 'transform 0.3s ease',
             }}
             onClick={cancelarExclusao}
           >
