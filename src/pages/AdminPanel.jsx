@@ -163,13 +163,15 @@ export default function AdminPanel() {
                     userSelect: 'none',
                     color: '#d32f2f',
                     fontWeight: '700',
-                    transition: 'background-color 0.3s ease',
+                    transition: 'background-color 0.3s ease, transform 0.3s ease', 
                   }}
                   onMouseEnter={(e) =>
                     (e.currentTarget.style.backgroundColor = '#f9e6e6')
+                    (e.currentTarget.style.transform = 'scale(1.02)')
                   }
                   onMouseLeave={(e) =>
                     (e.currentTarget.style.backgroundColor = '#fff')
+                    (e.currentTarget.style.transform = 'scale(1)')
                   }
                 >
                   <div style={{ fontSize: 18 }}>{usuario.nome}</div>
