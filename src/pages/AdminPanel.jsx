@@ -163,15 +163,15 @@ export default function AdminPanel() {
                     userSelect: 'none',
                     color: '#d32f2f',
                     fontWeight: '700',
-                    transition: 'background-color 0.3s ease, transform 0.3s ease', 
+                    transition: 'background-color 0.3s ease, transform 0.3s ease',
                   }}
                   onMouseEnter={(e) =>
                     (e.currentTarget.style.backgroundColor = '#f9e6e6')
-                    (e.currentTarget.style.transform = 'scale(1.02)')
+                      (e.currentTarget.style.transform = 'scale(1.02)')
                   }
                   onMouseLeave={(e) =>
                     (e.currentTarget.style.backgroundColor = '#fff')
-                    (e.currentTarget.style.transform = 'scale(1)')
+                      (e.currentTarget.style.transform = 'scale(1)')
                   }
                 >
                   <div style={{ fontSize: 18 }}>{usuario.nome}</div>
@@ -188,33 +188,28 @@ export default function AdminPanel() {
 
                   <div
                     style={{
-                      maxHeight: isSelected ? 500 : 0,
+                      maxHeight: isSelected ? 200 : 0,
                       overflow: 'hidden',
-                      transition: 'max-height 0.4s ease',
+                      transition: 'max-height 0.5s ease, padding 0.5s ease',
                       color: '#000',
                       fontWeight: 'normal',
                       fontSize: 14,
-                      paddingLeft: isSelected ? 20 : 0,
+                      padding: isSelected ? '10px 20px' : '0 20px',
                     }}
                   >
-                    {isSelected && (
-                      <ul style={{ marginTop: 10 }}>
-                        {usuario.Veiculos?.length > 0 ? (
-                          usuario.Veiculos.map((v) => (
-                            <li key={v.id} style={{ marginBottom: 6 }}>
-                              <strong>Placa:</strong> {v.placa} |{' '}
-                              <strong>Modelo:</strong> {v.modelo}
-                            </li>
-                          ))
-                        ) : (
-                          <li
-                            style={{ fontStyle: 'italic', color: '#999' }}
-                          >
-                            Nenhum veículo cadastrado
+                    <ul style={{ margin: 0 }}>
+                      {usuario.Veiculos?.length > 0 ? (
+                        usuario.Veiculos.map((v) => (
+                          <li key={v.id} style={{ marginBottom: 6 }}>
+                            <strong>Placa:</strong> {v.placa} | <strong>Modelo:</strong> {v.modelo}
                           </li>
-                        )}
-                      </ul>
-                    )}
+                        ))
+                      ) : (
+                        <li style={{ fontStyle: 'italic', color: '#999' }}>
+                          Nenhum veículo cadastrado
+                        </li>
+                      )}
+                    </ul>
                   </div>
                 </div>
               );
@@ -292,11 +287,11 @@ export default function AdminPanel() {
               }}
               onMouseEnter={(e) =>
                 (e.currentTarget.style.backgroundColor = '#b71c1c')
-                (e.currentTarget.style.transform = 'scale(1.02)')
+                  (e.currentTarget.style.transform = 'scale(1.02)')
               }
               onMouseLeave={(e) =>
                 (e.currentTarget.style.backgroundColor = '#d32f2f')
-                (e.currentTarget.style.transform = 'scale(1)')
+                  (e.currentTarget.style.transform = 'scale(1)')
               }
             >
               Adicionar Estacionamento
